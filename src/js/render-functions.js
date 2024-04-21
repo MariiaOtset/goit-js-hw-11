@@ -1,20 +1,21 @@
 export function createMarkup(images) {
     return images.map(elem => {
-        `<li class="gallery-item">
+        return  `<li class="gallery-item">
       <a href="${elem.largeImageURL}">
-        <img src="${elem.webformatURL}" loading="lazy" alt="${elem.tags}" />
+        <img src="${elem.webformatURL}" loading="lazy" alt="${elem.tags}" width="360"
+height="282"/>
         <ul class="card-info">
-          <li>Likes
-            <p>${elem.likes}</p>
+          <li class="text-span">Likes
+            <p class="text">${elem.likes}</p>
           </li>
-          <li> Views
-            <p>${elem.views}</p>
+          <li class="text-span"> Views
+            <p class="text">${elem.views}</p>
           </li>
-          <li> Comments
-            <p>${elem.comments}</p>
+          <li class="text-span"> Comments
+            <p class="text">${elem.comments}</p>
           </li>
-           <li> Downloads
-           <p>${elem.downloads}</p>
+           <li class="text-span"> Downloads
+           <p class="text">${elem.downloads}</p>
            </li>
         </ul>
       </a>
@@ -23,3 +24,13 @@ export function createMarkup(images) {
 .join("");
 };
 
+export class Loader {
+static spinner = document.querySelector('.loader-backdrop');
+  static show() {
+    Loader.spinner.classList.remove('hidden');
+  }
+
+ static hide() {
+    Loader.spinner.classList.add('hidden');
+  }
+}

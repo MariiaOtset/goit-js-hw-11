@@ -1,12 +1,11 @@
-// import { PixabayApiService } from './js/pixabay-api.js';
-import { createMarkup } from './js/render-functions.js';
-
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
-import { fetchImages } from './js/pixabay-api';
+
+import { fetchImages } from './js/pixabay-api.js';
+import { createMarkup } from './js/render-functions.js';
 
 const loader = document.querySelector('.loader');
 const gallery = document.querySelector(".gallery")
@@ -48,7 +47,7 @@ function renderImages(data) {
 
 const instance = new SimpleLightbox('.gallery-item a', {
   captionsData: 'alt',
-  captionDelay: 250,
+  captionDelay: 200,
 });
 
 function toggleLoader() {
