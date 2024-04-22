@@ -29,15 +29,15 @@ function onSubmitForm(event) {
 };
 
 function renderImages(data) {
-  if (!data || !data.hits || !data.hits.length) {
-    iziToast.error({
-      title: 'Error',
-      message:
-        'Sorry, there are no images matching your search query. Please try again!',
-      position: 'topRight',
-    });
-    return;
-  }
+  // if (!data || !data.hits || !data.hits.length) {
+  //   iziToast.error({
+  //     title: 'Error',
+  //     message:
+  //       'Sorry, there are no images matching your search query. Please try again!',
+  //     position: 'topRight',
+  //   });
+  //   return;
+  // }
 
   const { hits } = data;
   const markup = createMarkup(hits);

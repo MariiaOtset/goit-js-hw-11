@@ -29,7 +29,7 @@ export function fetchImages(searchQuery) {
           message: "Sorry, there are no images matching your search query. Please try again!",
           position: "topRight",
         });
-        Loader.hide();
+    Loader.hide();
         return [];
       }
       Loader.hide();
